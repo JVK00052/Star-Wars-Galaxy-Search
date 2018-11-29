@@ -1,0 +1,21 @@
+<form [formGroup]="galacticArchives" (ngSubmit)="onSubmit()">
+  <select name="galacticLocator" formControlName="galacticLocator" required  id="galacticLocator" required>
+    <option *ngFor="let gl of galacticLocator" value="{{ gl.value }}">{{ gl.view }}</option>
+  </select>
+  <input type="text" id="search" formControlName="galacticEntry" required>
+  <button type="submit">Search Galatic Archives</button>
+</form>
+
+<p>{{ _data | json }}</p>
+
+
+
+
+
+
+
+
+
+
+
+
